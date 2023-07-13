@@ -1,0 +1,16 @@
+{
+  "name": "user-management-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:client": "cd client && npm run dev",
+    "start:server": "cd server && npm run dev",
+    "install:dependencies:client": "cd client && npm install",
+    "install:dependencies:server": "cd server && npm install",
+    "install:dependencies": "npm run install:dependencies:client && npm run install:dependencies:server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
