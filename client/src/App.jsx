@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+import Header from "./components/Header";
+import UserCard from "./components/UserCard";
+
 export default function App() {
   const [users, setUsers] = useState([]);
   const BASE_URL = "http://localhost:8080";
@@ -12,8 +15,8 @@ export default function App() {
   useEffect(() => {
     try {
       fetchData();
-    } catch (error) {
-      console.error("error: ",error);
+    } catch (err) {
+      console.error("error: ", err);
     }
   }, []);
 
@@ -21,13 +24,9 @@ export default function App() {
 
   return (
     <>
-      <main>
-        <h1 className="text-center text-[#fff] text-3xl">
-          User Management System
-        </h1>
-        <div>
-          <h1>Name:</h1>
-        </div>
+      <main className="flex flex-col items-center gap-4">
+        <Header />
+        <UserCard />
       </main>
     </>
   );
